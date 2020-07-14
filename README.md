@@ -4,11 +4,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
-|mail|string|null:false, unique:true, index:true|
+|mail|string|null: false, unique: true, index: true|
 |password|string|null: false|
 |last_name|string|null: false|
 |first_name|string|null: false|
-|last_name_kana|string|null:false|
+|last_name_kana|string|null: false|
 |first_name_kana|string|null: false|
 |birth_year|date|null: false|
 |birth_month|date|null: false|
@@ -22,11 +22,11 @@
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_img|string|null:false|
+|item_img|string|null: false|
 |name|string|null: false|
 |introduction|text|null: false|
 |category|string|null: false|
-|item_condition|string|null:false|
+|item_condition|string|null: false|
 |postage_payer|string|null: false|
 |prefecture_code|integer|null: false|
 |preparation_day|string|null: false|
