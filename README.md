@@ -24,15 +24,15 @@
 |name|string|null: false|
 |introduction|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
-|item_condition|string|null: false|
-|postage_payer|string|null: false|
+|item_condition|integer|null: false|
+|postage_payer|integer|null: false|
 |prefecture_code_id|integer|null: false, foreign_key: true|
-|preparation_day|string|null: false|
+|preparation_day|integer|null: false|
 |price|integer|null: false|
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_many :sending_destinations
+- has_one :sending_destinations
 - belongs_to_active_hash :category
 - belongs_to_active_hash :prefecture_code
 
