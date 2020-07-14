@@ -29,6 +29,7 @@
 |prefecture_code_id|integer|null: false, foreign_key: true|
 |preparation_day|integer|null: false|
 |price|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments
