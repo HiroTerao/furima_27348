@@ -15,8 +15,9 @@
 |birth_day|date|null: false|
 ### Association
 - has_many :items
-- has_many :comments
+- has_many :comments, through: items
 - has_many :credit_cards
+- has_many :sending_destinations
 
 ## itemsテーブル
 |Column|Type|Options|
@@ -32,7 +33,7 @@
 |price|integer|null: false|
 ### Association
 - belongs_to :user
-- has_many :comments
+- has_many :comments, through: users
 
 ## commentsテーブル
 |Column|Type|Options|
