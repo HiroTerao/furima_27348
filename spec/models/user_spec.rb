@@ -7,8 +7,7 @@ describe User do
     end
     context 'valid' do 
       it 'is valid with a nickname, email, password, last_name, first_name, last_name_kana, first_name_kana, birth' do
-        user = @user
-        expect(user).to be_valid
+        expect(@user).to be_valid
       end
 
       it 'is valid with a password that has more than 6 and combination of alphanumeric characters' do
