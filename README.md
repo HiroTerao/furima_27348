@@ -10,9 +10,7 @@
 |first_name|string|null: false|
 |last_name_kana|string|null: false|
 |first_name_kana|string|null: false|
-|birth_year|integer|null: false|
-|birth_month|integer|null: false|
-|birth_day|integer|null: false|
+|birth|date|null: false|
 ### Association
 - has_many :items
 - has_many :comments
@@ -24,10 +22,10 @@
 |name|string|null: false|
 |introduction|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
-|item_condition|integer|null: false|
-|postage_payer|integer|null: false|
+|item_condition_id|integer|null: false, foreign_key: true|
+|postage_payer_id|integer|null: false, foreign_key: true|
 |prefecture_code_id|integer|null: false, foreign_key: true|
-|preparation_day|integer|null: false|
+|preparation_day_id|integer|null: false, foreign_key: true|
 |price|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
@@ -35,7 +33,10 @@
 - has_many :comments
 - has_one :sending_destinations
 - belongs_to_active_hash :category
+- belongs_to_active_hash :item_condition
+- belongs_to_active_hash :postage_payer
 - belongs_to_active_hash :prefecture_code
+- belongs_to_active_hash :preparation_day
 
 ## commentsテーブル
 |Column|Type|Options|

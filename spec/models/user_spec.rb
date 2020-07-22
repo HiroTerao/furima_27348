@@ -5,7 +5,7 @@ describe User do
     before do
       @user = build(:user)
     end
-    context 'valid' do 
+    context 'valid' do
       it 'is valid with a nickname, email, password, last_name, first_name, last_name_kana, first_name_kana, birth' do
         expect(@user).to be_valid
       end
@@ -23,18 +23,18 @@ describe User do
       end
 
       it 'is valid with a last_name_kana 全角カタカナ' do
-        @user.last_name_kana = "ゼンカクカナ"
+        @user.last_name_kana = 'ゼンカクカナ'
         @user.valid?
         expect(@user).to be_valid
       end
 
       it 'is valid with a first_name_kana 全角カタカナ' do
-        @user.first_name_kana = "ゼンカクカナ"
+        @user.first_name_kana = 'ゼンカクカナ'
         @user.valid?
         expect(@user).to be_valid
       end
     end
-    
+
     context 'invalid' do
       it 'is invalid without a nickname' do
         @user.nickname = nil
@@ -56,7 +56,7 @@ describe User do
       end
 
       it 'is invalid without @ to email' do
-        @user.email = "aaaaaa"
+        @user.email = 'aaaaaa'
         @user.valid?
         expect(@user.errors[:email]).to include('is invalid')
       end

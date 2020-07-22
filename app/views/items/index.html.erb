@@ -163,10 +163,17 @@
     </ul>
   </div>
 </div>
-<div class='purchase-btn'>
-  <span class='purchase-btn-text'>出品する</span>
-  <a href="#">
+
+<% if user_signed_in? %>
+  <div class='purchase-btn'>
+    <%= link_to '出品する', new_item_path, class: "purchase-btn-text" %>
     <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-  </a>
-</div>
-<%= render "shared/footer" %>
+  </div>
+  <%= render "shared/footer" %>
+<% else %>
+    <div class='purchase-btn'>
+    <%= link_to '出品する', new_user_session_path, class: "purchase-btn-text" %>
+    <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+  </div>
+  <%= render "shared/footer" %>
+ <% end %>
