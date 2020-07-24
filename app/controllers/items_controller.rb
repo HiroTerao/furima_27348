@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show]
+
   def index
     @items = Item.all
   end
@@ -17,8 +19,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
-    @user = User.find(@item.user_id)
   end
 
   private
@@ -36,5 +36,9 @@ class ItemsController < ApplicationController
       :price,
       :user_id
     ).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end

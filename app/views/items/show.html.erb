@@ -7,11 +7,11 @@
     </h2>
     <div class='item-img-content'>
       <%= image_tag @item.image, class: "item-box-img" %>
-      <% if @item.user_id = nil %>
+      
       <div class='sold-out'>
         <span>Sold Out!!</span>
-      </div>
-      <% end %>
+       </div>
+      
     </div>
     <div class="item-price-box">
       <span class="item-price">
@@ -22,7 +22,7 @@
       </span>
     </div>
 
-  <% if current_user == @user %>
+  <% if user_signed_in? && current_user.id == @item.user_id %>
     <%= link_to '商品の編集', "#", method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
     <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
@@ -36,7 +36,7 @@
       <tbody>
         <tr>
           <th class="detail-item">出品者</th>
-          <td class="detail-value"><%= @user.nickname %></td>
+          <td class="detail-value"><%= @item.user.nickname %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
