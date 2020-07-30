@@ -1,7 +1,9 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one_attached :image
+  has_one  :trade, class_name:"Transaction", dependent: :destroy
   belongs_to :user
+  has_many :orders, dependent: :destroy
   belongs_to_active_hash :category
   belongs_to_active_hash :item_condition
   belongs_to_active_hash :postage_payer
