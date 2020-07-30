@@ -64,8 +64,6 @@ class ItemsController < ApplicationController
 
   def correct_user
     @item = Item.find(params[:id])
-    if @item.orders.present?
-      redirect_to root_path
-    end 
+    redirect_to root_path if @item.orders.present?
   end
 end

@@ -1,5 +1,4 @@
 class TransactionOrder
-
   include ActiveModel::Model
   attr_accessor :token, :post_code, :prefecture_code_id, :city, :house_number, :building_name, :phone_number, :user_id, :item_id
 

@@ -24,10 +24,10 @@ RSpec.describe Transaction, type: :model do
         expect(@transaction.errors[:post_code]).to include("can't be blank")
       end
 
-      it "is invalid without a no hyphen on post_code" do
+      it 'is invalid without a no hyphen on post_code' do
         @transaction.post_code = '1111111'
         @transaction.valid?
-        expect(@transaction.errors[:post_code]).to include("郵便番号にはハイフンが必要です。")
+        expect(@transaction.errors[:post_code]).to include('郵便番号にはハイフンが必要です。')
       end
 
       it 'is invalid without a prefecture_code_id' do
@@ -54,10 +54,10 @@ RSpec.describe Transaction, type: :model do
         expect(@transaction.errors[:phone_number]).to include("can't be blank")
       end
 
-      it "is invalid with phone_number on hyphen" do
+      it 'is invalid with phone_number on hyphen' do
         @transaction.phone_number = '090-1111-2222'
         @transaction.valid?
-        expect(@transaction.errors[:phone_number]).to include("電話番号にはハイフンは不要で11桁以内です。")
+        expect(@transaction.errors[:phone_number]).to include('電話番号にはハイフンは不要で11桁以内です。')
       end
     end
   end

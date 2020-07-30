@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one_attached :image
-  has_one  :trade, class_name:"Transaction", dependent: :destroy
+  has_one :trade, class_name: 'Transaction', dependent: :destroy
   belongs_to :user
   has_many :orders, dependent: :destroy
   belongs_to_active_hash :category
