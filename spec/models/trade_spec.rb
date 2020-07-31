@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Trade, type: :model do
-   describe '#create' do
+  describe '#create' do
     before do
       @trade = build(:trade)
     end
