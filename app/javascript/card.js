@@ -1,5 +1,5 @@
 const pay = () => {
-  Payjp.setPublicKey(Rails.application.credentials.payjp[:public_key]);
+  Payjp.setPublicKey("pk_test_d78e7fcf887a30d4ce08507e");
   const form = document.getElementById("charge-form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
