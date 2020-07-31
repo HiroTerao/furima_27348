@@ -31,7 +31,7 @@
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_one :sending_destinations
+- has_one :transaction
 - belongs_to_active_hash :category
 - belongs_to_active_hash :item_condition
 - belongs_to_active_hash :postage_payer
@@ -48,15 +48,15 @@
 - belongs_to :user
 - belongs_to :item
 
-## sending_destinationsテーブル
+## transactionsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_code|integer|null: false|
+|post_code|string|null: false|
 |prefecture_code_id|integer|null: false, foreign_key: true|
 |city|string|null: false|
 |building_name|string||
-|phone_number|string|null: false, unique: true|
+|phone_number|integer|null: false, unique: true|
 |item_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :item
+- has_one :item
 - belongs_to_active_hash :prefecture_code
