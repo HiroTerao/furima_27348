@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :transaction do
+  factory :trade do
     post_code           { '111-1111' }
     prefecture_code_id  { '2' }
     city                { '札幌市' }

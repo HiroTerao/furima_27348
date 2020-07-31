@@ -4,11 +4,11 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = TransactionOrder.new
+    @order = TradeOrder.new
   end
 
   def create
-    @order = TransactionOrder.new(order_params)
+    @order = TradeOrder.new(order_params)
     if @order.valid?
       pay_item
       @order.save

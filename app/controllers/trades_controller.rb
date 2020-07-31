@@ -1,4 +1,4 @@
-class TransactionsController < ApplicationController
+class TradesController < ApplicationController
   before_action :correct_user, only: :index
 
   def index
