@@ -1,6 +1,6 @@
 ## 📲アプリ名:Furimaアプリ
 #### 🌐URL  : https://furima-27348.herokuapp.com/
-#### 📱プレイ動画  : [![Image from Gyazo](https://i.gyazo.com/893ff206046fdb82c15111921843ef83.gif)](https://gyazo.com/893ff206046fdb82c15111921843ef83)
+#### 📱動画  : [![Image from Gyazo](https://i.gyazo.com/893ff206046fdb82c15111921843ef83.gif)](https://gyazo.com/893ff206046fdb82c15111921843ef83)
 
 
 ## 🤔💭なぜ作成したのか
